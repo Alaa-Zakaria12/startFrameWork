@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Portfolio.css";
-import Modal from "../modal";
+import Modal from "../Modal";
 import img1 from "../../assets/imgi_1_poert1.png";
 import img2 from "../../assets/imgi_2_port2.png";
 import img3 from "../../assets/imgi_3_port3.png";  
