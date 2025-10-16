@@ -1,0 +1,133 @@
+.portfolio {
+  height: 98vh;
+  text-align: center;
+  padding-top: 120px; /* علشان العنوان يبان وميدخلش تحت النافبار */
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.portfolio-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 40px;
+}
+
+.line {
+  width: 70px;
+  height: 3px;
+  background-color: #2c3e50;
+  margin: 0 10px;
+}
+
+.star {
+  color: #2c3e50;
+  font-size: 20px;
+  position: relative;
+}
+
+/* خطوط قبل وبعد النجمة */
+.star::before,
+.star::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 3px;
+  background-color: #2c3e50;
+  transform: translateY(-50%);
+}
+
+.star::before {
+  right: 120%;
+}
+
+.star::after {
+  left: 120%;
+}
+
+/* Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 0 40px;
+  justify-items: center;
+}
+
+/* Card */
+.portfolio-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.02);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 188, 156, 0.9);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+
+.plus {
+  font-size: 80px;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content img {
+  width: 80%;
+  max-width: 600px;
+  margin-left: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}

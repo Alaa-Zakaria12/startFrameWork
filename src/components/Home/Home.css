@@ -1,0 +1,35 @@
+
+img {
+    width: 250px;
+}
+.home{
+    background-color: #1abc9c;
+    height: 98vh;
+}
+.star-icon {
+  position: relative;
+  display: inline-block;
+  color: #ffffff; /* لون النجمة والخطين */
+}
+
+.star-icon::before,
+.star-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;      /* طول الخط */
+  height: 4px;       /* سمك الخط */
+  background-color: currentColor; /* نفس لون النجمة */
+}
+
+.star-icon::before {
+  left: -120px; /* المسافة من جهة اليسار */
+}
+
+.star-icon::after {
+  right: -120px; /* المسافة من جهة اليمين */
+}
+
+.star-icon i {
+  font-size: 24px; /* حجم النجمة */
+}
